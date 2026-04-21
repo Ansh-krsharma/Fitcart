@@ -152,14 +152,13 @@ WHERE email = 'your-email@example.com';
 
 ---
 
-## 📸 Screenshots (Optional)
+## 📸 Screenshots
 
 * Home Page
 * Product Listing
 * Cart Page
 * Admin Dashboard
 
-(Add screenshots here for better GitHub appearance)
 
 ---
 
@@ -190,6 +189,7 @@ FitCart demonstrates a complete full-stack e-commerce system with secure authent
 ## 👨‍💻 Author
 
 Ansh kumar sharma
+
 GitHub: https://github.com/your-username
 
 ---
