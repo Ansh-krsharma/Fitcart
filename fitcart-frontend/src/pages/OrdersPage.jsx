@@ -9,18 +9,29 @@ export default function OrdersPage() {
   }, []);
 
   return (
-    <div className="container">
-      <h2>My Orders</h2>
-      {orders.length === 0 ? <p>No orders yet.</p> : null}
-      {orders.map((o) => (
-        <div key={o.id} className="card">
-          <p><strong>Order ID:</strong> {o.id}</p>
-          <p><strong>Total:</strong> ₹{o.total}</p>
-          <p><strong>Status:</strong> {o.status}</p>
-          <p><strong>Address:</strong> {o.address}</p>
-          <p><strong>Created:</strong> {o.createdAt}</p>
+    <div className="page-shell">
+      <div className="container">
+        <section className="section-heading compact-heading">
+          <div>
+            <h2>My Orders</h2>
+            <p>Track placed orders and monitor their status.</p>
+          </div>
+        </section>
+        {orders.length === 0 ? <div className="card empty-state">No orders yet.</div> : null}
+        <div className="orders-grid">
+          {orders.map((o) => (
+            <div key={o.id} className="card order-card">
+              <div className="order-top-row">
+                <strong>Order #{o.id}</strong>
+                <span className="badge">{o.status}</span>
+              </div>
+              <div className="order-line"><span>Total</span><strong>₹{o.total}</strong></div>
+              <div className="order-line"><span>Address</span><span>{o.address}</span></div>
+              <div className="order-line"><span>Created</span><span>{o.createdAt}</span></div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 }

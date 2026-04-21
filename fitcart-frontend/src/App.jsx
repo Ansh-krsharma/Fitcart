@@ -9,6 +9,7 @@ import OrdersPage from "./pages/OrdersPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminProducts from "./pages/AdminProducts";
 import AdminOrders from "./pages/AdminOrders";
+import AdminCustomers from "./pages/AdminCustomers";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/admin" element={<ProtectedRoute adminOnly={true}><AdminDashboard /></ProtectedRoute>} />
         <Route path="/admin/products" element={<ProtectedRoute adminOnly={true}><AdminProducts /></ProtectedRoute>} />
         <Route path="/admin/orders" element={<ProtectedRoute adminOnly={true}><AdminOrders /></ProtectedRoute>} />
+        <Route path="/admin/customers" element={<ProtectedRoute adminOnly={true}><AdminCustomers /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   );

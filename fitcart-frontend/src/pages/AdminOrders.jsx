@@ -26,23 +26,35 @@ export default function AdminOrders() {
   };
 
   return (
-    <div className="container">
-      <h2>All Orders</h2>
-      {message && <p>{message}</p>}
-      {orders.map((o) => (
-        <div key={o.id} className="card">
-          <p><strong>Order #</strong> {o.id}</p>
-          <p>Total: ₹{o.total}</p>
-          <p>Address: {o.address}</p>
-          <p>Created: {o.createdAt}</p>
-          <div className="inline-actions">
-            <strong>Status:</strong>
-            <select value={o.status} onChange={(e) => updateStatus(o.id, e.target.value)}>
-              {statuses.map((s) => <option key={s} value={s}>{s}</option>)}
-            </select>
+    <div className="page-shell">
+      <div className="container">
+        <section className="section-heading compact-heading">
+          <div>
+            <h2>Manage Orders</h2>
+            <p>Update fulfillment stages and monitor recent order activity.</p>
           </div>
+        </section>
+        {message && <div className="flash-message">{message}</div>}
+        <div className="orders-grid admin-orders-grid">
+          {orders.map((o) => (
+            <div key={o.id} className="card order-card">
+              <div className="order-top-row">
+                <strong>Order #{o.id}</strong>
+                <span className="badge">{o.status}</span>
+              </div>
+              <div className="order-line"><span>Total</span><strong>₹{o.total}</strong></div>
+              <div className="order-line"><span>Address</span><span>{o.address}</span></div>
+              <div className="order-line"><span>Created</span><span>{o.createdAt}</span></div>
+              <div className="status-editor">
+                <label>Status</label>
+                <select value={o.status} onChange={(e) => updateStatus(o.id, e.target.value)}>
+                  {statuses.map((s) => <option key={s} value={s}>{s}</option>)}
+                </select>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 }

@@ -59,35 +59,54 @@ export default function AdminProducts() {
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="card">
-          <h2>{editingId ? "Edit Product" : "Add Product"}</h2>
-          {message && <p>{message}</p>}
-          <form onSubmit={submitProduct}>
-            <input placeholder="Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
-            <textarea placeholder="Description" value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} />
-            <input placeholder="Price" value={form.price} onChange={(e) => setForm({ ...form, price: e.target.value })} />
-            <input placeholder="Quantity" value={form.quantity} onChange={(e) => setForm({ ...form, quantity: e.target.value })} />
-            <input placeholder="Category" value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })} />
-            <input placeholder="Image URL" value={form.imageUrl} onChange={(e) => setForm({ ...form, imageUrl: e.target.value })} />
-            <button className="primary">{editingId ? "Update Product" : "Save Product"}</button>
-          </form>
-        </div>
-        <div className="card">
-          <h2>All Products</h2>
-          {products.map((p) => (
-            <div key={p.id} className="list-item">
-              <div>
-                <strong>{p.name}</strong> — ₹{p.price} — Stock: {p.quantity}
-                <p>{p.category}</p>
-              </div>
-              <div className="inline-actions">
-                <button className="secondary" onClick={() => startEdit(p)}>Edit</button>
-                <button className="danger" onClick={() => deleteProduct(p.id)}>Delete</button>
-              </div>
+    <div className="page-shell">
+      <div className="container">
+        <section className="section-heading compact-heading">
+          <div>
+            <h2>Admin Products</h2>
+            <p>Add, update, and manage the storefront catalog.</p>
+          </div>
+        </section>
+
+        <div className="admin-products-layout">
+          <div className="card form-card-large">
+            <h3>{editingId ? "Edit Product" : "Add Product"}</h3>
+            {message && <div className="flash-message small">{message}</div>}
+            <form onSubmit={submitProduct} className="product-form-grid">
+              <input placeholder="Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+              <input placeholder="Category" value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })} />
+              <textarea placeholder="Description" value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} />
+              <input placeholder="Image URL" value={form.imageUrl} onChange={(e) => setForm({ ...form, imageUrl: e.target.value })} />
+              <input placeholder="Price" value={form.price} onChange={(e) => setForm({ ...form, price: e.target.value })} />
+              <input placeholder="Quantity" value={form.quantity} onChange={(e) => setForm({ ...form, quantity: e.target.value })} />
+              <button className="button primary-btn">{editingId ? "Update Product" : "Save Product"}</button>
+            </form>
+          </div>
+
+          <div>
+            <div className="admin-product-grid">
+              {products.map((p) => (
+                <div key={p.id} className="card admin-product-card">
+                  <img src={p.imageUrl || "https://via.placeholder.com/420x280?text=FitCart"} alt={p.name} className="admin-product-image" />
+                  <div className="admin-product-body">
+                    <div className="order-top-row">
+                      <strong>{p.name}</strong>
+                      <span className="badge">{p.category || 'Fitness'}</span>
+                    </div>
+                    <p className="product-text">{p.description}</p>
+                    <div className="cart-meta-row">
+                      <span>₹{p.price}</span>
+                      <span>Stock: {p.quantity}</span>
+                    </div>
+                    <div className="inline-actions">
+                      <button className="button ghost-btn" onClick={() => startEdit(p)}>Edit</button>
+                      <button className="button dark-btn" onClick={() => deleteProduct(p.id)}>Delete</button>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>

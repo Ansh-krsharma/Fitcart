@@ -1,0 +1,24 @@
+FitCart MySQL-Integrated Setup
+
+1) Install and start MySQL.
+2) Create database once (optional because createDatabaseIfNotExist=true is enabled):
+   CREATE DATABASE fitcart;
+3) Open fitcart-backend/src/main/resources/application.properties
+   Set your real MySQL username/password.
+   Example:
+   spring.datasource.username=root
+   spring.datasource.password=your_real_password
+4) Run backend:
+   mvn clean spring-boot:run
+5) Open backend test URL:
+   http://localhost:8080/api/products
+6) Run frontend:
+   npm install
+   npm run dev
+7) Open frontend:
+   http://localhost:5173
+
+Notes:
+- data.sql auto-loads sample products on startup.
+- /api/products is public in SecurityConfig.
+- Frontend already reads imageUrl from backend.

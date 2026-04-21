@@ -1,5 +1,6 @@
 package com.fitcart.controller;
 
+import com.fitcart.dto.AdminUserResponse;
 import com.fitcart.dto.UpdateOrderStatusRequest;
 import com.fitcart.entity.Order;
 import com.fitcart.entity.Product;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/admin")
@@ -58,6 +60,13 @@ public class AdminController {
     @GetMapping("/orders")
     public List<Order> allOrders() {
         return orderService.getAllOrders();
+    }
+
+    @GetMapping("/users")
+    public List<AdminUserResponse> users() {
+        return adminService.getAllUsers().stream()
+                .map(u -> new AdminUserResponse(u.getId(), u.getName(), u.getEmail(), u.getRole()))
+                .collect(Collectors.toList());
     }
 
     @PutMapping("/orders/{orderId}/status")

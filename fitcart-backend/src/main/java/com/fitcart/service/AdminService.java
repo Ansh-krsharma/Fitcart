@@ -18,6 +18,10 @@ public class AdminService {
     @Autowired private OrderRepository orderRepository;
     @Autowired private UserRepository userRepository;
 
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
     public Map<String, Object> dashboardStats() {
         List<Product> products = productRepository.findAll();
         List<Order> orders = orderRepository.findAll();
