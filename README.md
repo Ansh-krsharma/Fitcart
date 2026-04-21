@@ -88,52 +88,48 @@ Open MySQL and run:
 UPDATE users
 SET role = 'ROLE_ADMIN'
 WHERE email = 'your-email@example.com';
-Login again → You now have admin access
-🔗 API Endpoints
-Public
-GET /api/products
-POST /api/auth/register
-POST /api/auth/login
-Admin
-POST /api/admin/products
-PUT /api/admin/products/{id}
-DELETE /api/admin/products/{id}
-🧪 Testing
-Use Postman for API testing
-Use browser DevTools → Network tab to debug requests
-❗ Common Issues & Fixes
-MySQL Connection Error
-Access denied for user 'root'
+```
 
-✔ Fix: Update correct password in application.properties
+---
 
-Backend Not Starting
+## 📸 Screenshots (Optional)
 
-✔ Ensure:
+* Home Page
+* Product Listing
+* Cart Page
+* Admin Dashboard
 
-Java 17 installed
-Maven installed
-MySQL running
-Products Not Showing
+(Add screenshots here for better GitHub appearance)
 
-✔ Check:
+---
 
-/api/products returns data
-Database has rows
-Frontend API URL is correct
-📸 Screenshots
+## 🧪 Testing
 
-(Add your UI screenshots here)
+* API testing using Postman
+* Unit testing using JUnit
+* Functional testing for user flows
 
-📌 Future Improvements
-Payment Integration (Razorpay/Stripe)
-Product Reviews & Ratings
-Wishlist Feature
-Image Upload (Cloudinary)
-Advanced Filters (price range)
-👨‍💻 Author
+---
 
-Your Name
+## 🚀 Future Enhancements
+
+* Payment Gateway Integration
+* Product Reviews & Ratings
+* Search & Filters
+* Image Upload System (Cloudinary)
+* Responsive UI improvements
+
+---
+
+## 📌 Conclusion
+
+FitCart demonstrates a complete full-stack e-commerce system with secure authentication, modular design, and real-world application features. It is suitable for learning, academic submission, and portfolio projects.
+
+---
+
+## 👨‍💻 Author
+
+Ansh kumar sharma
 GitHub: https://github.com/your-username
 
 ⭐ If you like this project
