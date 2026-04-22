@@ -92,6 +92,8 @@ cd fitcart
 
 ### 🔹 2. Setup MySQL
 
+"Refer to MYSQL_SETUP.txt"
+
 Create database:
 
 ```
@@ -152,6 +154,8 @@ http://localhost:5173
 ---
 
 ## 📦 Sample Products (Optional)
+
+"Refer to MYSQL_SETUP.txt"
 
 Run this SQL to insert products:
 
