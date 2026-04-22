@@ -232,23 +232,48 @@ Access denied for user 'root'
 
 ---
 
-##📸 Screenshots
-###🏠 Home Page
+## 📸 Screenshots
 
-*Customer View
-<img src="https://github.com/user-attachments/assets/2a77cb01-fe41-4447-b66e-b3c7534432d8" width="450"/>
+### 🏠 Home Page
 
-*Admin View
-<img src="https://github.com/user-attachments/assets/54254c09-d752-4078-b531-876ebfa31a1a" width="450"/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2a77cb01-fe41-4447-b66e-b3c7534432d8" width="45%" />
+  <img src="https://github.com/user-attachments/assets/54254c09-d752-4078-b531-876ebfa31a1a" width="45%" />
+</p>
 
-###🛍️ Product Listing
-<img src="https://github.com/user-attachments/assets/ab32725c-5667-40dd-af93-9954c5f7ee21" width="600"/>
+<p align="center">
+  <b>Customer View</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Admin View</b>
+</p>
 
-###🛒 Cart Page
-<img src="https://github.com/user-attachments/assets/1d632932-bd25-494c-9770-09cd24a76fcc" width="600"/>
+---
 
-###📊 Admin Dashboard
-<img src="https://github.com/user-attachments/assets/0d120e15-3a63-4e8c-9d4e-5ac4d9c02e5a" width="600"/> <img src="https://github.com/user-attachments/assets/280116e8-5e46-4769-8975-7f738bb2076c" width="600"/> <img src="https://github.com/user-attachments/assets/bbdbc679-2e49-4751-a11e-df31dcb01dda" width="600"/>
+### 🛍️ Product Listing
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ab32725c-5667-40dd-af93-9954c5f7ee21" width="70%" />
+</p>
+
+---
+
+### 🛒 Cart Page
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1d632932-bd25-494c-9770-09cd24a76fcc" width="70%" />
+</p>
+
+---
+
+### 📊 Admin Dashboard
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0d120e15-3a63-4e8c-9d4e-5ac4d9c02e5a" width="70%" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/280116e8-5e46-4769-8975-7f738bb2076c" width="45%" />
+  <img src="https://github.com/user-attachments/assets/bbdbc679-2e49-4751-a11e-df31dcb01dda" width="45%" />
+</p>
 
 ---
 
