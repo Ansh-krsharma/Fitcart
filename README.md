@@ -234,7 +234,22 @@ Access denied for user 'root'
 
 ## 📸 Screenshots
 
-(Add your UI screenshots here)
+* Home Page
+  customer:
+  <img width="430" height="482" alt="Screenshot 2026-04-22 042748" src="https://github.com/user-attachments/assets/2a77cb01-fe41-4447-b66e-b3c7534432d8" />
+   Admin:<img width="629" height="498" alt="Screenshot 2026-04-22 043952" src="https://github.com/user-attachments/assets/54254c09-d752-4078-b531-876ebfa31a1a" />
+* Product Listing
+  <img width="639" height="550" alt="Screenshot 2026-04-22 044102" src="https://github.com/user-attachments/assets/ab32725c-5667-40dd-af93-9954c5f7ee21" />
+
+* Cart Page
+  <img width="632" height="302" alt="Screenshot 2026-04-22 042912" src="https://github.com/user-attachments/assets/1d632932-bd25-494c-9770-09cd24a76fcc" />
+
+* Admin Dashboard
+
+ <img width="647" height="327" alt="Screenshot 2026-04-22 044041" src="https://github.com/user-attachments/assets/0d120e15-3a63-4e8c-9d4e-5ac4d9c02e5a" />
+<img width="593" height="352" alt="Screenshot 2026-04-22 044121" src="https://github.com/user-attachments/assets/280116e8-5e46-4769-8975-7f738bb2076c" />
+<img width="590" height="502" alt="Screenshot 2026-04-22 044111" src="https://github.com/user-attachments/assets/bbdbc679-2e49-4751-a11e-df31dcb01dda" />
+
 
 ---
 
